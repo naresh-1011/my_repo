@@ -1,6 +1,9 @@
 # Use official Nginx base image
 FROM nginx:alpine
 
+# Set environment variable for allowed IP (default: 127.0.0.1)
+ENV ALLOWED_IP=127.0.0.1
+
 # Copy custom nginx.conf into the image
 COPY nginx.conf /etc/nginx/nginx.conf
 
